@@ -4,7 +4,9 @@ import './App.css'
 function App() {
 
   return (
-    <>  <div className="Luan"><h1 className="title">Gym App</h1></div>
+    <>  <div className="Luan">
+          <h1 className="title">Gym App</h1>
+          <p>Welcome to the Gym App!</p>        </div>
     </>
   )
 }
