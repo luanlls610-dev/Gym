@@ -1,0 +1,3 @@
+export function Configuracoes({ tema, onAlterarTema }) {
+  return <div className="pagina pagina-vazia"><span className="sobretitulo">PERSONALIZE SEU ESPAÇO</span><h1>Configurações</h1><section className="cartao configuracao-tema"><div><h2>Aparência</h2><p>Escolha como prefere visualizar a plataforma.</p></div><div className="seletor-tema" role="group" aria-label="Tema da interface"><button type="button" className={tema === 'escuro' ? 'selecionado' : ''} onClick={() => onAlterarTema('escuro')}>◐ Escuro</button><button type="button" className={tema === 'claro' ? 'selecionado' : ''} onClick={() => onAlterarTema('claro')}>☼ Claro</button></div></section></div>;
+}
