@@ -1,16 +1,79 @@
-# React + Vite
+# FORMA — Training Club
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend de uma plataforma fitness com React. O projeto usa exclusivamente JavaScript, Vite e CSS próprio.
 
-Currently, two official plugins are available:
+## Estado atual
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação contém navegação entre quatro áreas e uma base visual compartilhada. O dashboard mostra agenda semanal selecionável, indicadores apenas quando os dados da API estiverem disponíveis, estados de carregamento, indisponibilidade, erro e semana vazia. Como o backend ainda não está presente neste repositório, a página informa que os dados não estão conectados e não apresenta resultados fictícios.
 
-## React Compiler
+A biblioteca e os guias ainda aguardam suas etapas de implementação. Veja [docs/funcionalidades.md](./docs/funcionalidades.md) para o inventário por módulo e [docs/arquitetura.md](./docs/arquitetura.md) para a estrutura, os contratos pendentes e as alternativas de persistência.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias
 
-## Expanding the ESLint configuration
+- JavaScript, React e React DOM.
+- HTML e CSS.
+- Vite para desenvolvimento e build.
+- ESLint para análise estática.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Nenhuma dependência adicional foi instalada.
+
+## Estrutura do frontend
+
+```text
+src/
+  componentes/
+    layout/
+      AppShell.jsx
+    ui/
+      Button.jsx
+      Icon.jsx
+    Navbar.jsx
+  hooks/
+    useDashboardData.js
+  pages/
+    estado_dashboard.jsx
+    meus_treinos.jsx
+    meus_treinos.css
+    administrar_treinos.jsx
+    biblioteca_exercicios.jsx
+    configuracoes.jsx
+    dicas_calculadoras.jsx
+  services/
+    dashboardService.js
+  estilos/
+    tokens.css
+    global.css
+    layout.css
+  utils/
+    datas.js
+  App.jsx
+  App.css
+  index.css
+  main.jsx
+```
+
+## Instalação e execução
+
+Na pasta `Gym/Gym`:
+
+```sh
+npm install
+npm run dev
+```
+
+O Vite mostra o endereço local no terminal.
+
+Para integrar o dashboard, configure `VITE_API_BASE_URL` com o endereço da API que implemente o contrato descrito em [docs/arquitetura.md](./docs/arquitetura.md). Sem essa configuração, o dashboard apresenta o estado explícito de integração indisponível.
+
+## Comandos disponíveis
+
+- `npm run dev`: servidor de desenvolvimento.
+- `npm run build`: build de produção em `dist/`.
+- `npm run preview`: preview local do build.
+- `npm run lint`: ESLint.
+
+Ainda não há script de testes automatizados configurado.
+
+## Documentação
+
+Atualize `docs/` ao alterar arquitetura, funcionalidades, componentes, regras ou integrações. Não instale bibliotecas sem justificativa e aprovação.

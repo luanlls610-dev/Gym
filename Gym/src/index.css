@@ -1,5 +1,3 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root { font-family: 'DM Sans', sans-serif; color: #f3f3f3; background: #101010; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; --fundo:#101010; --painel:#171717; --borda:#292929; --texto:#f3f3f3; --suave:#858585; --vermelho:#ed443b; --laranja:#f2a45c; }
-:root[data-tema='claro'] { color:#202020; background:#f5f5f3; --fundo:#f5f5f3; --painel:#fff; --borda:#e5e4e0; --texto:#202020; --suave:#777773; --vermelho:#d83d35; --laranja:#bd6b20; }
-* { box-sizing:border-box; } body { margin:0; min-width:320px; min-height:100vh; background:var(--fundo); color:var(--texto); transition:background .2s ease,color .2s ease; }
-button,a { font:inherit; } button { color:inherit; } button:focus-visible,a:focus-visible { outline:2px solid var(--vermelho); outline-offset:3px; } ::selection { color:#fff; background:var(--vermelho); }
+@import './estilos/tokens.css';
+@import './estilos/global.css';

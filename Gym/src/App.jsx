@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { AppShell } from './componentes/layout/AppShell';
 import './App.css';
-import { Navbar } from './componentes/Navbar';
+import './estilos/layout.css';
 import { MeusTreinos } from './pages/meus_treinos';
 import { BibliotecaExercicios } from './pages/biblioteca_exercicios';
 import { DicasCalculadoras } from './pages/dicas_calculadoras';
@@ -16,17 +17,17 @@ function lerTemaSalvo() {
   }
 }
 
+/** Mantém a preferência de tema e compõe as áreas principais da aplicação. */
 export function App() {
   const [abaAtiva, setAbaAtiva] = useState('treinos');
   const [tema, setTema] = useState(lerTemaSalvo);
 
-  // Mantém o tema escolhido entre visitas, sem impedir o uso em navegadores restritivos.
   useEffect(() => {
     document.documentElement.dataset.tema = tema;
     try {
       window.localStorage.setItem(CHAVE_TEMA, tema);
     } catch {
-      // A preferência continua aplicada nesta sessão mesmo sem armazenamento local.
+      // O tema permanece ativo durante esta sessão mesmo sem armazenamento local.
     }
   }, [tema]);
 
@@ -38,10 +39,9 @@ export function App() {
   };
 
   return (
-    <div className="app-shell">
-      <Navbar abaAtiva={abaAtiva} onSelecionarAba={setAbaAtiva} />
-      <main className="conteudo-principal">{paginas[abaAtiva]}</main>
-    </div>
+    <AppShell abaAtiva={abaAtiva} onSelecionarAba={setAbaAtiva}>
+      {paginas[abaAtiva]}
+    </AppShell>
   );
 }
 

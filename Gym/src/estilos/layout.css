@@ -1,0 +1,226 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.barra-lateral {
+  position: fixed;
+  z-index: 5;
+  inset: 0 auto 0 0;
+  display: flex;
+  width: var(--largura-sidebar);
+  flex-direction: column;
+  padding: 28px 18px 18px;
+  border-right: 1px solid var(--borda);
+  background: var(--fundo);
+}
+
+.marca {
+  display: flex;
+  min-height: var(--alvo-toque);
+  align-items: center;
+  gap: 10px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.marca-icone {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  background: var(--vermelho);
+  color: var(--texto-inverso);
+  font: italic 800 18px var(--fonte-titulo);
+}
+
+.marca-nome {
+  font: 800 15px var(--fonte-titulo);
+  letter-spacing: .05em;
+}
+
+.marca-nome small {
+  display: block;
+  margin-top: 3px;
+  color: var(--suave);
+  font: 600 8px var(--fonte-interface);
+  letter-spacing: .2em;
+}
+
+.marca-ponto {
+  color: var(--vermelho);
+}
+
+.rotulo-menu {
+  margin: 48px 10px 14px;
+  color: var(--suave);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.links-navegacao {
+  display: grid;
+  gap: 5px;
+}
+
+.botao {
+  display: inline-flex;
+  min-height: var(--alvo-toque);
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 14px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-controle);
+  background: transparent;
+  color: var(--texto);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.botao:hover {
+  border-color: var(--suave);
+}
+
+.botao--primary {
+  border-color: var(--vermelho);
+  background: var(--vermelho);
+  color: var(--texto-inverso);
+}
+
+.botao--primary:hover {
+  border-color: var(--vermelho-hover);
+  background: var(--vermelho-hover);
+}
+
+.botao--secondary {
+  background: var(--painel);
+}
+
+.botao--navigation {
+  justify-content: flex-start;
+}
+
+.link-navegacao {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border-color: transparent;
+  color: var(--suave);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.link-navegacao:hover,
+.link-navegacao[aria-current='page'] {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--vermelho) 12%, transparent);
+  color: var(--texto);
+}
+
+.link-navegacao[aria-current='page'] {
+  box-shadow: inset 2px 0 var(--vermelho);
+}
+
+.icone-nav {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.perfil-compacto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--borda);
+}
+
+.avatar {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--painel-elevado);
+  color: var(--laranja);
+  font: 700 13px var(--fonte-titulo);
+}
+
+.perfil-compacto strong,
+.perfil-compacto span {
+  display: block;
+  font-size: 10px;
+}
+
+.perfil-compacto div:last-child span {
+  margin-top: 3px;
+  color: var(--suave);
+  font-size: 9px;
+}
+
+.conteudo-principal {
+  width: min(100% - var(--largura-sidebar), 1400px);
+  min-height: 100vh;
+  margin-left: var(--largura-sidebar);
+  padding: 50px clamp(25px, 6vw, 82px) 28px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --largura-sidebar: 190px;
+  }
+
+  .conteudo-principal {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 620px) {
+  .barra-lateral {
+    inset: auto 0 0;
+    width: 100%;
+    height: calc(67px + env(safe-area-inset-bottom));
+    padding: 4px 8px env(safe-area-inset-bottom);
+    border-top: 1px solid var(--borda);
+    border-right: 0;
+    background: var(--painel);
+  }
+
+  .marca,
+  .rotulo-menu,
+  .perfil-compacto {
+    display: none;
+  }
+
+  .links-navegacao {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .link-navegacao {
+    min-height: 52px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 2px;
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .link-navegacao[aria-current='page'] {
+    box-shadow: inset 0 2px var(--vermelho);
+  }
+
+  .conteudo-principal {
+    width: 100%;
+    margin-left: 0;
+    padding: 27px 16px calc(87px + env(safe-area-inset-bottom));
+  }
+}

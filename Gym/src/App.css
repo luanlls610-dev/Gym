@@ -1,4 +1,99 @@
-.app-shell{min-height:100vh}.barra-lateral{position:fixed;inset:0 auto 0 0;width:225px;padding:28px 18px;border-right:1px solid var(--borda);background:var(--fundo);z-index:2}.marca{display:flex;align-items:center;gap:10px;color:var(--texto);text-decoration:none;font:800 15px Manrope,sans-serif;letter-spacing:.05em}.marca small{display:block;margin-top:3px;color:var(--suave);font:600 8px 'DM Sans',sans-serif;letter-spacing:.2em}.marca-icone{display:grid;width:34px;height:34px;place-items:center;background:var(--vermelho);color:white;font-style:italic}.marca-ponto{color:var(--vermelho)}.rotulo-menu,.sobretitulo{color:var(--suave);font-size:9px;font-weight:700;letter-spacing:.15em}.rotulo-menu{margin:55px 10px 15px}.links-navegacao{display:grid;gap:5px}.link-navegacao{display:flex;align-items:center;gap:13px;width:100%;min-height:43px;padding:0 12px;border:0;border-radius:3px;background:transparent;color:var(--suave);text-align:left;cursor:pointer;font-size:11px}.link-navegacao:hover,.link-navegacao.ativo{background:color-mix(in srgb,var(--vermelho) 12%,transparent);color:var(--texto)}.link-navegacao.ativo{box-shadow:inset 2px 0 var(--vermelho)}.icone-nav{width:18px;text-align:center;font-size:15px}.perfil-compacto{position:absolute;right:18px;bottom:20px;left:18px;display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--borda)}.avatar{display:grid;width:31px;height:31px;place-items:center;border-radius:50%;background:#34302f;color:var(--laranja)}.perfil-compacto strong,.perfil-compacto span{display:block;font-size:10px}.perfil-compacto div:last-child span{margin-top:3px;color:var(--suave);font-size:9px}.conteudo-principal{max-width:1400px;min-height:100vh;margin-left:225px;padding:50px clamp(25px,6vw,82px) 24px}.pagina{max-width:1050px;margin:auto;animation:aparecer .22s ease}@keyframes aparecer{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}.topo-pagina{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:32px}.topo-pagina h1,.pagina-vazia h1{margin:8px 0;font:600 clamp(24px,3vw,34px) Manrope,sans-serif;letter-spacing:-.04em}.topo-pagina p,.pagina-vazia>p{margin:0;color:var(--suave);font-size:11px;line-height:1.7}.botao{min-height:38px;padding:0 14px;border:1px solid var(--borda);border-radius:3px;background:transparent;cursor:pointer;font-size:10px;transition:transform .15s}.botao:hover{transform:translateY(-1px)}.botao-secundario{width:40px;padding:0;color:var(--suave);font-size:17px}.botao-texto{border:0;color:var(--suave)}.botao-primario{border-color:var(--vermelho);background:var(--vermelho);color:white;font-weight:600}.resumo-grid{display:grid;grid-template-columns:1fr 1fr 1.05fr;gap:12px}.cartao{border:1px solid var(--borda);background:var(--painel)}.resumo-cartao{min-height:145px;padding:17px}.resumo-icone{display:grid;width:27px;height:27px;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--vermelho) 14%,transparent)}.resumo-icone.vermelho{color:var(--vermelho)}.resumo-icone.laranja{color:var(--laranja);background:color-mix(in srgb,var(--laranja) 14%,transparent)}.numero-resumo{display:block;margin-top:13px;font:700 29px Manrope,sans-serif}.numero-resumo span{margin-left:4px;color:var(--suave);font:500 12px 'DM Sans',sans-serif}.rotulo-resumo,.texto-suave{display:block;margin-top:3px;color:var(--suave);font-size:9px}.barra-progresso{height:3px;margin-top:14px;background:var(--borda)}.barra-progresso span{display:block;width:68%;height:100%;background:var(--vermelho)}.mini-barras{height:20px;display:flex;align-items:end;gap:5px;margin-top:8px}.mini-barras i{flex:1;height:45%;background:var(--borda)}.mini-barras i:nth-child(even){height:75%}.mini-barras i:nth-child(5){height:100%;background:var(--laranja)}.frase-cartao{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:145px;padding:18px 22px;overflow:hidden}.frase-cartao .aspas{position:absolute;top:3px;left:17px;color:var(--vermelho);opacity:.45;font:60px Georgia}.frase-cartao p{z-index:1;max-width:210px;margin:0 0 12px;font:600 13px/1.5 Manrope,sans-serif}.frase-cartao .texto-suave{font-size:8px;letter-spacing:.12em}.secao-agenda,.secao-treino-hoje{margin-top:38px}.cabecalho-secao{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}.cabecalho-secao h2{margin:5px 0 0;font:600 18px Manrope,sans-serif}.agenda-semanal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.dia-card{display:flex;min-height:118px;flex-direction:column;align-items:center;padding:12px 5px 9px;border:1px solid var(--borda);background:var(--painel)}.dia-card.dia-hoje{border-color:var(--vermelho);background:color-mix(in srgb,var(--vermelho) 7%,var(--painel))}.dia-label{color:var(--suave);font-size:8px;font-weight:700}.dia-numero{margin-top:5px;font:600 17px Manrope}.dia-hoje .dia-numero{color:var(--vermelho)}.dia-marcador{width:4px;height:4px;margin-top:6px;border-radius:50%;background:var(--borda)}.dia-marcador.feito{background:#82b787}.dia-marcador.hoje{background:var(--vermelho)}.dia-marcador.futuro{background:var(--laranja)}.dia-detalhe{width:100%;margin-top:11px;text-align:center}.dia-detalhe strong,.dia-detalhe span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dia-detalhe strong{font-size:8px}.dia-detalhe span{margin-top:4px;color:var(--suave);font-size:7px}.treino-destaque{display:grid;grid-template-columns:145px 1fr auto;align-items:center;gap:22px;padding:15px}.treino-ilustracao{position:relative;height:112px;overflow:hidden;background:#211d1c}.treino-ilustracao>span{position:absolute;z-index:1;top:8px;left:12px;color:var(--laranja);font:700 10px Manrope}.orb{position:absolute;border:1px solid #69504a;border-radius:50%}.orb-um{top:28px;left:25px;width:95px;height:95px}.orb-dois{top:47px;left:44px;width:58px;height:58px;background:#49302d}.linha-grafica{position:absolute;top:47px;left:20px;width:120px;border-top:1px solid var(--vermelho);transform:rotate(-25deg)}.tag{display:inline-block;padding:5px 7px;font-size:8px;font-weight:700;letter-spacing:.1em}.tag-vermelha{background:color-mix(in srgb,var(--vermelho) 13%,transparent);color:var(--vermelho)}.treino-info h3{margin:8px 0 5px;font:600 16px Manrope}.treino-info p{max-width:420px;margin:0;color:var(--suave);font-size:9px;line-height:1.6}.treino-metadados{display:flex;gap:14px;margin-top:12px;color:var(--suave);font-size:8px}.rodape-pagina{display:flex;justify-content:space-between;margin-top:38px;padding-top:12px;border-top:1px solid var(--borda);color:var(--suave);font-size:8px;letter-spacing:.1em}.pagina-vazia{padding-top:26px}.configuracao-tema{max-width:620px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:30px;padding:20px}.configuracao-tema h2{margin:0 0 5px;font:600 13px Manrope}.configuracao-tema p{margin:0;color:var(--suave);font-size:10px}.seletor-tema{display:flex;gap:4px;padding:4px;background:var(--fundo)}.seletor-tema button{padding:8px;border:0;background:transparent;color:var(--suave);cursor:pointer;font-size:9px}.seletor-tema button.selecionado{background:var(--painel);color:var(--texto)}
-@media(max-width:900px){.barra-lateral{width:190px}.conteudo-principal{margin-left:190px;padding-right:25px;padding-left:25px}.resumo-grid{grid-template-columns:1fr 1fr}.frase-cartao{grid-column:1/-1;min-height:105px}.agenda-semanal{grid-template-columns:repeat(4,minmax(0,1fr))}.treino-destaque{grid-template-columns:120px 1fr}.treino-destaque>.botao{grid-column:2;justify-self:start}}
-@media(max-width:620px){.barra-lateral{inset:auto 0 0;width:auto;height:67px;padding:4px 8px env(safe-area-inset-bottom);border-top:1px solid var(--borda);border-right:0;background:var(--painel)}.marca,.rotulo-menu,.perfil-compacto{display:none}.links-navegacao{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}.link-navegacao{min-height:53px;flex-direction:column;justify-content:center;gap:3px;padding:3px;font-size:8px}.link-navegacao.ativo{box-shadow:inset 0 2px var(--vermelho)}.conteudo-principal{margin:0;padding:27px 16px 87px}.topo-pagina{margin-bottom:24px}.topo-pagina h1{max-width:270px;font-size:24px}.topo-pagina p{font-size:10px}.resumo-grid{gap:8px}.resumo-cartao{min-height:135px;padding:12px}.numero-resumo{font-size:25px}.frase-cartao{min-height:100px}.secao-agenda,.secao-treino-hoje{margin-top:30px}.agenda-semanal{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.dia-card{min-height:106px;padding:9px 4px}.treino-destaque{grid-template-columns:1fr;gap:12px;padding:11px}.treino-ilustracao{height:115px}.treino-destaque>.botao{grid-column:auto;width:100%}.configuracao-tema{align-items:flex-start;flex-direction:column}.rodape-pagina{font-size:7px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.pagina {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.sobretitulo {
+  color: var(--suave);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.topo-pagina {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.topo-pagina h1,
+.pagina-vazia h1 {
+  margin: 8px 0;
+  font: 600 clamp(24px, 3vw, 34px) var(--fonte-titulo);
+  letter-spacing: -.04em;
+}
+
+.topo-pagina p,
+.pagina-vazia > p {
+  margin: 0;
+  color: var(--suave);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.botao-texto {
+  border-color: transparent;
+  color: var(--suave);
+}
+
+.botao-secundario {
+  padding: 0;
+  color: var(--suave);
+}
+
+.botao-primario {
+  border-color: var(--vermelho);
+  background: var(--vermelho);
+  color: var(--texto-inverso);
+}
+
+.cartao {
+  border: 1px solid var(--borda);
+  background: var(--painel);
+}
+
+.pagina-vazia { padding-top: 26px; }
+
+.configuracao-tema {
+  display: flex;
+  max-width: 620px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.configuracao-tema h2 {
+  margin: 0 0 5px;
+  font: 600 13px var(--fonte-titulo);
+}
+
+.configuracao-tema p {
+  margin: 0;
+  color: var(--suave);
+  font-size: 11px;
+}
+
+.seletor-tema {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--fundo);
+}
+
+.seletor-tema button {
+  min-height: 36px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--suave);
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.seletor-tema button.selecionado {
+  background: var(--painel);
+  color: var(--texto);
+}
